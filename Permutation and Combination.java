@@ -1,26 +1,29 @@
-package Edureka;
-import java.util.Scanner;
-public class nprandncr {
-//calculating a factorial of a number
-public static int fact(int num)
-{
-int fact=1, i;
-for(i=1; i<=num; i++)
-{
-fact = fact*i;
-}
-return fact;
-}
-public static void main(String args[])
-{
-int n, r;
-Scanner scan = new Scanner(System.in);
-System.out.print("Enter Value of n : ");
-n = scan.nextInt();
-System.out.print("Enter Value of r : ");
-r = scan.nextInt();
-// NCR and NPR of a number
-System.out.print("NCR = " +(fact(n)/(fact(n-r)*fact(r))));
-System.out.print("nNPR = " +(fact(n)/(fact(n-r))));
-}
-}
+import java.util.*;   
+public class PermutationExample {  
+   static int fact(int number) {  
+      int f = 1;  
+      int j = 1;  
+      while(j <= number) {  
+         f = f * j;  
+         j++;  
+      }  
+      return f;  
+   }  
+   public static void main(String args[]) {  
+         
+      List<Integer> numbers = new ArrayList<Integer>();  
+        
+      numbers.add(12);  
+      numbers.add(13);  
+      numbers.add(1);  
+      numbers.add(6);  
+      numbers.add(9);  
+        
+      int n = numbers.size();  
+      int r = 3;  
+      int result;  
+        
+      result = fact(n) / fact(n-r);  
+      System.out.println("The permutation value for the numbers list is: " + result);  
+   }  
+}  
