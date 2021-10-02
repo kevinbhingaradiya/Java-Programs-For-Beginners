@@ -1,16 +1,31 @@
-package Edureka;
-public class Fibonacci {
-public static void main(String[] args) {
-//initializing the constants
-int n = 100, t1 = 0, t2 = 1;
-System.out.print("Upto " + n + ": ");
-//while loop to calculate fibonacci series upto n numbers
-while (t1<= n)
-{
-System.out.print(t1 + " + ");
-int sum = t1 + t2;
-t1 = t2;
-t2 = sum;
-}
-}
+// Recursive implementation of
+// Fibonacci Series
+
+class fibonacci {
+
+	// Function to print the fibonacci series
+	static int fib(int n)
+	{
+		// Base Case
+		if (n <= 1)
+			return n;
+
+		// Recursive call
+		return fib(n - 1)
+			+ fib(n - 2);
+	}
+
+	// Driver Code
+	public static void
+	main(String args[])
+	{
+		// Given Number N
+		int N = 10;
+
+		// Print the first N numbers
+		for (int i = 0; i < N; i++) {
+
+			System.out.print(fib(i) + " ");
+		}
+	}
 }
