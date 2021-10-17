@@ -58,5 +58,4 @@ class GFG
 	}
 }
 
-// This code is contributed
-// by Arnav Kr. Mandal.
+
