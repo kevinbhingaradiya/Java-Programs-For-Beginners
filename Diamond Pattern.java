@@ -1,30 +1,62 @@
-package Edureka;
-import java.util.Scanner;
-public class PatternA {
-// Java program to print alphabet A pattern
-void display(int n)
+// JAVA Code to print
+// the diamond shape
+import java.util.*;
+
+class GFG
 {
-// Outer for loop for number of lines
-for (int i = 0; i<=n; i++) {
-// Inner for loop for logic execution
-for (int j = 0; j<= n / 2; j++) {
-// prints two column lines
-if ((j == 0 || j == n / 2) && i != 0 ||
-// print first line of alphabet
-i == 0  && j != n / 2 ||
-// prints middle line
-i == n / 2)
-System.out.print("*");
-else
-System.out.print(" ");
+	
+	// Prints diamond pattern
+	// with 2n rows
+	static void printDiamond(int n)
+	{
+		int space = n - 1;
+	
+		// run loop (parent loop)
+		// till number of rows
+		for (int i = 0; i < n; i++)
+		{
+			// loop for initially space,
+			// before star printing
+			for (int j = 0; j < space; j++)
+				System.out.print(" ");
+	
+			// Print i+1 stars
+			for (int j = 0; j <= i; j++)
+				System.out.print("* ");
+	
+			System.out.print("\n");
+			space--;
+		}
+	
+		// Repeat again in
+		// reverse order
+		space = 0;
+	
+		// run loop (parent loop)
+		// till number of rows
+		for (int i = n; i > 0; i--)
+		{
+			// loop for initially space,
+			// before star printing
+			for (int j = 0; j < space; j++)
+				System.out.print(" ");
+	
+			// Print i stars
+			for (int j = 0; j < i; j++)
+				System.out.print("* ");
+	
+			System.out.print("\n");
+			space++;
+		}
+	}
+	
+	// Driver Code
+	public static void main(String[] args)
+	{
+		printDiamond(5);
+		
+	}
 }
-System.out.println();
-}
-}
-public static void main(String[] args)
-{
-Scanner sc = new Scanner(System.in);
-PatternA a = new PatternA();
-a.display(7);
-}
-}
+
+// This code is contributed
+// by Arnav Kr. Mandal.
